@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { identidad } from 'src/app/model/identidad.model';
+import { IdentidadService } from 'src/app/service/identidad.service';
 
 @Component({
   selector: 'app-perfil',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-
-  constructor() { }
+  identidad: identidad = new identidad("","","");
+  
+  constructor(public identidadService: IdentidadService) { }
 
   ngOnInit(): void {
+    this.identidadService.getIdentidad().subscribe(info =>{this.identidad = info})
   }
 
 }
