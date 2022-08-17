@@ -1,4 +1,21 @@
-#logo{
+.container {
+    background-color:rgb(44,47,51) ;
+    width: 100%;
     display: flex;
-    width: 150px;
+    justify-content: space-between;
+    align-items: center;
+       
+}
+
+p{
+    color: white;
+}
+
+.logo{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.redes{
+    margin-right: 10px;
 }
